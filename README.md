@@ -88,52 +88,57 @@ The script defines two functions:
  - celsius_to_fahrenheit(c): Converts Celsius to Fahrenheit using the formula
 F = C × 9/5 + 32
 
-fahrenheit_to_celsius(f): Converts Fahrenheit to Celsius using the formula
+ - fahrenheit_to_celsius(f): Converts Fahrenheit to Celsius using the formula
 C = (F − 32) × 5/9
 
-The script also:
+***The script also:*** <br>
 
-Prompts the user to enter a Celsius value and a Fahrenheit value
+ - Prompts the user to enter a Celsius value and a Fahrenheit value
+ - Displays example conversions for 25°C and 77°F
+ - Displays the conversion results for the user’s input
 
-Displays example conversions for 25°C and 77°F
+***Usage*** <br>
 
-Displays the conversion results for the user’s input
+ 1. Copy the following code into a Python file (e.g., temp_converter.py):
 
-Usage
-Copy the following code into a Python file (e.g., temp_converter.py):
+     ```
+      def celsius_to_fahrenheit(c):
+          return c * 9/5 + 32
+      
+      def fahrenheit_to_celsius(f):
+          return (f - 32) * 5/9
+      
+      c = int(input("Enter a Celsius: "))
+      f = int(input("Enter a Fahrenheit: "))
+      
+      print(f"25°C is {celsius_to_fahrenheit(25)}°F")
+      print(f"77°F is {fahrenheit_to_celsius(77)}°C")
+      print("User given Data")
+      print(f"{c}°C is {celsius_to_fahrenheit(c)}°F")
+      print(f"{f}°F is {fahrenheit_to_celsius(f):.1f}°C")
 
-python
-def celsius_to_fahrenheit(c):
-    return c * 9/5 + 32
+     ```
+     
+ 2. Run the script:
 
-def fahrenheit_to_celsius(f):
-    return (f - 32) * 5/9
+    ```
+    python Tempareture.py
+    ```
+ 3. Enter the Celsius and Fahrenheit values when prompted.
 
-c = int(input("Enter a Celsius: "))
-f = int(input("Enter a Fahrenheit: "))
+***Example Output*** <br>
+ ```
+ Enter a Celsius: 30
+ Enter a Fahrenheit: 86
+ 25°C is 77.0°F
+ 77°F is 25.0°C
+ User given Data
+ 30°C is 86.0°F
+ 86°F is 30.0°C
 
-print(f"25°C is {celsius_to_fahrenheit(25)}°F")
-print(f"77°F is {fahrenheit_to_celsius(77)}°C")
-print("User given Data")
-print(f"{c}°C is {celsius_to_fahrenheit(c)}°F")
-print(f"{f}°F is {fahrenheit_to_celsius(f):.1f}°C")
-Run the script:
+ ```
 
-bash
-python temp_converter.py
-Enter the Celsius and Fahrenheit values when prompted.
-
-Example Output
-text
-Enter a Celsius: 30
-Enter a Fahrenheit: 86
-25°C is 77.0°F
-77°F is 25.0°C
-User given Data
-30°C is 86.0°F
-86°F is 30.0°C
-Notes
-The script uses int(input(...)), so only integer values are accepted.
-You can change int to float if you want to allow decimal inputs.
-
-Output for Fahrenheit to Celsius is formatted to one decimal place for clarity.
+***Notes***<br>
+ 1. The script uses int(input(...)), so only integer values are accepted.
+ 2. You can change int to float if you want to allow decimal inputs.
+ 3. Output for Fahrenheit to Celsius is formatted to one decimal place for clarity.
