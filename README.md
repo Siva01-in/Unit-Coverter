@@ -4,7 +4,7 @@
 
 A simple Python function to convert between different units of length, such as meters, kilometers, miles, feet, inches, and more.
 
-*Features*<br>
+***Features***<br>
  - Easily convert a value from one length unit to another.
  - Supports common units: meters, centimeters, millimeters, kilometers, inches, feet, yards, and miles.
  - Simple and beginner-friendly code. 
@@ -70,4 +70,70 @@ print(f"5 miles is {result} kilometers")
 
 
 
- # Tempareture
+ # Temperature
+***Temperature Converter***<br>
+
+  A simple interactive Python script that converts temperatures between Celsius and Fahrenheit.
+
+***Features*** <br>
+
+ - Convert Celsius to Fahrenheit and vice versa
+ - Accepts user input for both Celsius and Fahrenheit values
+ - Shows example conversions and user-provided conversions
+ - Formats output to one decimal place for better readability
+
+***How It Works*** <br>
+
+The script defines two functions:
+ - celsius_to_fahrenheit(c): Converts Celsius to Fahrenheit using the formula
+F = C × 9/5 + 32
+
+fahrenheit_to_celsius(f): Converts Fahrenheit to Celsius using the formula
+C = (F − 32) × 5/9
+
+The script also:
+
+Prompts the user to enter a Celsius value and a Fahrenheit value
+
+Displays example conversions for 25°C and 77°F
+
+Displays the conversion results for the user’s input
+
+Usage
+Copy the following code into a Python file (e.g., temp_converter.py):
+
+python
+def celsius_to_fahrenheit(c):
+    return c * 9/5 + 32
+
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
+
+c = int(input("Enter a Celsius: "))
+f = int(input("Enter a Fahrenheit: "))
+
+print(f"25°C is {celsius_to_fahrenheit(25)}°F")
+print(f"77°F is {fahrenheit_to_celsius(77)}°C")
+print("User given Data")
+print(f"{c}°C is {celsius_to_fahrenheit(c)}°F")
+print(f"{f}°F is {fahrenheit_to_celsius(f):.1f}°C")
+Run the script:
+
+bash
+python temp_converter.py
+Enter the Celsius and Fahrenheit values when prompted.
+
+Example Output
+text
+Enter a Celsius: 30
+Enter a Fahrenheit: 86
+25°C is 77.0°F
+77°F is 25.0°C
+User given Data
+30°C is 86.0°F
+86°F is 30.0°C
+Notes
+The script uses int(input(...)), so only integer values are accepted.
+You can change int to float if you want to allow decimal inputs.
+
+Output for Fahrenheit to Celsius is formatted to one decimal place for clarity.
